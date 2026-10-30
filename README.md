@@ -1,6 +1,6 @@
 # setup-cover100
 
-Install an exact [Cover100 CLI](https://github.com/sneat-dev/cover100-cli) release in GitHub Actions without Go. This action installs the CLI only; workflows choose which commands to run. Release-provided license and notice files are kept alongside the executable.
+Install an exact [Cover100 CLI](https://github.com/sneat-dev/cover100-cli) release in GitHub Actions without Go. This action installs the CLI only; workflows choose which commands to run. Release-provided license and notice files are kept alongside the executable. Self-hosted runners need PowerShell (`pwsh`); Unix runners also need `tar` and `chmod`.
 
 `version` is required and must be an exact release tag. `expected-sha256` optionally supplies an independently obtained digest for the selected archive. A checksum from the same release detects corruption but cannot authenticate a replaced release. Outputs include the installed tag and binary path.
 
